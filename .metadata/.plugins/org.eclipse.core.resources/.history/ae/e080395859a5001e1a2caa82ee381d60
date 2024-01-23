@@ -1,0 +1,12 @@
+package com.xworkz.google.dto;
+
+public class GoogleDto {
+	
+	
+	
+	private String id;
+	private String name;
+	private String version;
+	private int rate
+
+}

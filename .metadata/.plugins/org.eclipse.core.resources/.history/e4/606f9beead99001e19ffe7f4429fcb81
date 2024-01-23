@@ -1,0 +1,32 @@
+package Driver;
+
+public class Hotel {
+	
+	 String hotelName;
+	 int employees;
+	 String ownerName;
+	 
+	 
+	 public Hotel() {
+		 System.out.println("no-args constructor");
+	 }
+	 
+	 public Hotel(String hotelName,int employees,String ownerName) {
+		 this.hotelName=hotelName;
+		 this.ownerName=ownerName;
+		 this.employees=employees;
+	 }
+	 
+	 
+	 public static void main(String args[]) {
+		 Hotel h=new Hotel();
+		 h.employees=50;
+		 h.hotelName="shatiSagar";
+		 h.ownerName="Rudresh";
+		 System.out.println("no of employees:"+h.employees);
+		 System.out.println("owner is:"+h.ownerName);
+		 System.out.println("hotel Name is:"+h.hotelName);
+	 }
+	
+
+}

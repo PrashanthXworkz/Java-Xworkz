@@ -1,0 +1,26 @@
+package JavaTechnical;
+
+public class Occurrences {
+
+	public static void main(String[] args) {
+		int array[]= {2,3,2,4,6,3,5,7,8,6,4,4};
+		int size=array.length;
+		
+		for(int i=0;i<size;i++) {
+			int flag=0;
+			int count=0;
+			
+			for(int j=i+1;j<size;j++) {
+				if(array[i]==array[j]) {
+					flag=1;
+					break;
+				}
+			}
+		}
+		
+		
+		
+	}
+	
+
+}

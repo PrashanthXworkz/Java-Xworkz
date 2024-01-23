@@ -1,0 +1,27 @@
+package com.xworkz.google.repository;
+
+import com.xworkz.google.dto.GoogleDto;
+
+public class GoogleRepositoryImplementation implements GoogleAppsRepository {
+	
+	
+       private	GoogleDto[] googleDtoList=new GoogleDto[4];
+	  private int index=0;
+
+	@Override
+	public boolean onSave(GoogleDto googledto) {
+		if(this.index<this.googleDtoList.length) {
+			this.googleDtoList[this.index]=googledto;
+			index++;
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public GoogleDto[] read() {
+		
+		return googleDtoList;
+	}
+
+}

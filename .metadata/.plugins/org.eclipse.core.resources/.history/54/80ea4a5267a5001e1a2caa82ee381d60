@@ -1,0 +1,86 @@
+package com.xworkz.google.service;
+
+import com.xworkz.google.dto.GoogleDto;
+import com.xworkz.google.repository.GoogleAppsRepository;
+
+public class GoogleAppsServiceImplementation implements GoogleAppsService {
+	
+	
+	private GoogleAppsRepository repository;
+
+	public GoogleAppsServiceImplementation(GoogleAppsRepository repository) {
+		this.repository = repository;
+	}
+	
+	
+	boolean validateId=true;
+	boolean validateName=true;
+	boolean validateversion=true;
+	boolean validateRate=true;
+
+	@Override
+	public boolean validateandSave(GoogleDto googledto) {
+		if(googledto==null) {
+			System.out.println("googledto is null");
+		}
+		else {
+			if(googledto.getId().equals("null")
+			   || googledto.getId().equals(null)
+			   || (googledto.getId().length()<3 && googledto.getId().length()>10)
+			   || !googledto.getId().startsWith("G")) {
+				System.out.println("give the coorect id");
+				validateId=false;
+			}
+			if(googledto.getName().equals("null")
+			   || googledto.getName().equals(null)
+			   || (googledto.getName().length()<3 && googledto.getName().length()>10)) {
+				System.out.println("give the correct name");
+				validateName=false;
+			}
+			if(googledto.getVersion().equals("null")
+			   || googledto.getVersion().equals(null)
+			   || googledto.getVersion().endsWith("v")) {
+				System.out.println("give the correct version");
+				validateversion=false;
+			}
+		}
+		 boolean exist=isExists(googledto);
+		 
+		
+		return false;
+	}
+
+	@Override
+	public void read() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isExists(GoogleDto googledto) {
+		GoogleDto[] dtos=this.repository.read();
+		if(dtos!=null) {
+			for(GoogleDto name:dtos) {
+				if(name!=null) {
+					if(name.getId().equals(googledto.getId())){
+						System.out.println(" id is Exist");
+						return true;
+						}
+					if(name.getName().equals(googledto.getName())){
+						System.out.println(" name is Exist");
+						return true;
+						}
+					if(name.getVersion().equals(googledto.getVersion())){
+						System.out.println(" version is Exist");
+						return true;
+						}
+				}
+			}
+			
+		}
+		return false;
+	}
+	
+	
+
+}

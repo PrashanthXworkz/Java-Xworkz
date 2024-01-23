@@ -1,0 +1,13 @@
+package com.xworkz.google.repository;
+
+import com.xworkz.google.dto.GoogleDto;
+
+public interface GoogleAppsRepository {
+	
+	
+	boolean onSave(GoogleDto googledto);
+	
+	GoogleAppsDto[] read();
+	
+
+}

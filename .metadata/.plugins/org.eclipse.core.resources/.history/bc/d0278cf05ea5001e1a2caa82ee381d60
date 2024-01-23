@@ -1,0 +1,12 @@
+package com.xworkz.google.runner;
+
+import com.xworkz.google.dto.GoogleDto;
+
+public class GoogleDtoRunner {
+	public static void main(String [] args) {
+	
+	GoogleDto dtos=new GoogleDto();
+	
+
+}
+}

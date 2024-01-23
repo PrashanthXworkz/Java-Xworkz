@@ -1,0 +1,10 @@
+package com.xworkz.stadium.service;
+
+public interface Stadiumservice {
+
+	boolean valiadteandsave(String stadiumName);
+	String[] read();
+	boolean isExists();
+	boolean update(String oldName,String newName);
+	boolean delete(String stadiumName);
+}

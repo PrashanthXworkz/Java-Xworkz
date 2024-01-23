@@ -1,0 +1,5 @@
+package com.xworkz.voter.dto;
+
+public class VoterAppsDto {
+
+}

@@ -1,0 +1,11 @@
+package com.xworkz.voter.dto;
+
+public class VoterAppsDto {
+	
+	private long adharNumber;
+	private String name;
+	private String currentAddress;
+	
+	
+
+}

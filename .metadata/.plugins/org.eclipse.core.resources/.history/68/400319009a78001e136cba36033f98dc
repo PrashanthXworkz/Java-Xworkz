@@ -1,0 +1,13 @@
+package Things;
+
+public class Employee extends Company1 {
+	
+	public Employee() {
+		super();
+		System.out.println("The employee joined the company");
+		
+	}
+
+	
+
+}

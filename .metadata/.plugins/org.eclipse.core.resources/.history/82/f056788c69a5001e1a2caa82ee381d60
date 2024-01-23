@@ -1,0 +1,20 @@
+package com.xworkz.google.runner;
+
+import java.util.Scanner;
+
+import com.xworkz.google.dto.GoogleDto;
+
+public class GoogleDtoRunner {
+	
+	public static void main(String [] args) {
+	
+	GoogleDto dtos=new GoogleDto();
+	
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("enter the application id");
+	System.out.println(scanner.next());
+	
+	
+
+}
+}

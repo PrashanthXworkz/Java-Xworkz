@@ -1,0 +1,43 @@
+package com.xworkz.google.service;
+
+import com.xworkz.google.dto.GoogleDto;
+import com.xworkz.google.repository.GoogleAppsRepository;
+
+public class GoogleAppsServiceImplementation implements GoogleAppsService {
+	
+	
+	private GoogleAppsRepository repository;
+
+	public GoogleAppsServiceImplementation(GoogleAppsRepository repository) {
+		this.repository = repository;
+	}
+	
+	
+	boolean validateId=true;
+	boolean validateName=true;
+	boolean validateversion=true;
+	boolean validateRate=true;
+
+	@Override
+	public boolean validateandSave(GoogleDto googledto) {
+		if(googledto==null) {
+			System.out.println("googledto is null");
+		}
+		else {
+			if(googledto.getId().equals("null")
+			   || googledto.getId().equals(null)
+			   || (googledto.getId().length()<3 && googledto.getId().length()>10)
+			   || !googledto.getId().startsWith("G"))
+		}
+		return false;
+	}
+
+	@Override
+	public void read() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

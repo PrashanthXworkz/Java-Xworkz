@@ -1,0 +1,37 @@
+package com.xworkz.google.runner;
+
+import java.util.Scanner;
+
+import com.xworkz.google.dto.GoogleDto;
+import com.xworkz.google.service.GoogleAppsService;
+import com.xworkz.google.service.GoogleAppsServiceImplementation;
+
+public class GoogleDtoRunner {
+	
+	public static void main(String [] args) {
+	
+	GoogleDto dtos=new GoogleDto();
+	
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("enter the application id");
+	System.out.println(scanner.next());
+	System.out.println("enter the application name");
+	System.out.println(scanner.next());
+	System.out.println("enter the application version");
+	System.out.println(scanner.next());
+	System.out.println("enter the application rate");
+	System.out.println(scanner.next());
+	
+	scanner.close();
+	
+	
+	GoogleAppsRepository repository=new
+	
+	
+	GoogleAppsService service=new GoogleAppsServiceImplementation();
+	
+	
+	
+
+}
+}
